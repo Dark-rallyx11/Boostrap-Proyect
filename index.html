@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo_recortado.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Alejandro">
+    <title>SpeedGear</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .carrusel {
+            border-radius: 20px;
+            transition: 0.5s;
+        }
+        .carrusel:hover {
+            box-shadow: 0px 0px 7px white;
+        }
+
+        .elemento-carrusel {
+            border-radius: 20px;
+            max-height: 35vw;
+            overflow: hidden;
+        }
+        .elemento-carrusel img {
+        position: relative;
+        object-fit: cover;
+        translate: 0px -130px;
+        }
+
+        @media (max-width: 750px) {
+            .elemento-carrusel {
+                max-height: 45vw;
+            }
+            .elemento-carrusel img {
+                translate: 0px 0px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .elemento-carrusel {
+                max-height: 45vw;
+            }
+            .elemento-carrusel img {
+                translate: 0px 0px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-dark">
+    <!-- ----------------- HEADER START ----------------------- -->
+    <header class="container-fluid border-bottom lh-1 py-3 sombra">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <a class="link-secondary ps-2" href="index.html"><img src="images/logo.png" class="logo" width="70vw" alt="Logo"></a>
+          </div>
+          <h1 class="col-4 text-center">
+            <a class="blog-header-logo text-decoration-none text-sombra" href="index.html">SPEEDGEAR</a>
+          </h1>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <a class="btn btn-sm btn-outline-light me-2 d-none d-lg-block sombra text-sombra" href="login.html">Iniciar Sesión</a>
+          </div>
+        </div>
+      </header>
+    <!-- ----------------- HEADER END ----------------------- -->
+
+    <!-- ------------------------ NAVIGATION START ---------------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-light sombra mb-3">
+        <div class="container">
+            <a class="marca navbar-brand" href="index.html">HOME</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuMovil">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contactanos</a></li>
+                </ul>
+                <form class="d-flex ms-3" action="productos.html">
+                    <input class="campo-buscar form-control me-2" type="search" id="buscar1" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-sm btn-outline-light sombra text-sombra" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- ------------------------ NAVIGATION END ---------------------------- -->
+
+    <!-- ---------------------------- MENU LATERAL START ---------------------------- -->
+    <div class="menu-lateral offcanvas offcanvas-start bg-dark" tabindex="-1" id="menuMovil">
+      <div class="offcanvas-header border-bottom border-light">
+          <h5 class="titulo-menu-lateral offcanvas-title text-sombra">Menú</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+      </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link text-white" href="productos.html">Productos</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contactanos</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="login.html">Iniciar Sesión</a></li>
+            </ul>
+            <form class="mt-4 border-top border-light" action="productos.html">
+                <div class="mb-3">
+                    <label for="buscar" class="form-label">Buscar</label>
+                    <input type="text" class="campo-buscar form-control" id="buscar" placeholder="Buscar">
+                </div>
+                <button type="submit" class="btn btn-outline-light sombra text-sombra w-100">Buscar</button>
+            </form>
+        </div>  
+    </div>
+    <!-- ---------------------------- MENU LATERAL END ---------------------------- -->
+
+    <main class="container-fluid">
+    <!-- ---------------------------- CARROUSEL START ---------------------------------------- -->
+        <div id="carouselExampleFade" class="carousel slide carousel-fade carrusel bg-dark" data-bs-theme="dark" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active elemento-carrusel">
+              <img src="images/moto1.jpg" class="d-block w-100" alt="bike 1">
+            </div>
+            <div class="carousel-item elemento-carrusel">
+              <img src="images/moto2.jpeg" class="d-block w-100" alt="bike 2">
+            </div>
+            <div class="carousel-item elemento-carrusel">
+              <img src="images/moto3.jpg" class="d-block w-100" alt="bike 3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- ---------------------------- CARROUSEL END ---------------------------------------- -->
+
+        <h3 class="pb-4 mt-4 mb-4 forceFont text-center text-light text-sombra">
+          Motos de Exposición
+        </h3>
+      
+        <div class="row mb-2">
+          <h3 class="pb-4 mb-4 fst-italic border-bottom text-light text-sombra">
+            Motos de Temporada
+          </h3>
+          <!-- ------------------------ Tarjetas START ----------------------------- -->
+          <div class="card col-md-4 bg-dark text-light ">
+            <div class="row  g-0 border rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative sombra">
+              <img src="images/kawasaki-ninja.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="producto.html" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4 bg-dark text-light ">
+            <div class="row  g-0 border rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative sombra">
+              <img src="images/RS_660_EXTREMA.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="producto.html" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4 bg-dark text-light ">
+            <div class="row  g-0 border rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative sombra">
+              <img src="images/Yamaha-R3-azul.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="producto.html" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          
+          
+          <!-- ------------------------ Tarjetas END ----------------------------- -->
+        </div>
+      
+      </main>
+      <footer class="pt-3 text-center bg-dark text-light border-top border-light">
+        <p>&copy;2025 SPEEDGEAR ESP, Inc. All rights reserved.</p>
+      </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
